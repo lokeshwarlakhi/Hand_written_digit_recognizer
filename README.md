@@ -4,7 +4,7 @@ This is a model made out of Neural Network specifically a Convolutional Neural N
 
 ### Table of contents:
 
-1. Loading the data
+1. Importing Libraries
 
 2. Loading the data
 
@@ -20,7 +20,7 @@ This is a model made out of Neural Network specifically a Convolutional Neural N
 
                              
 
-## Libraries Involved
+## Importing Libraries
 
 Modules used in creating this model are `numpy` , `os` , `matplotlib` , `tensorflow` , `keras` , `cv2` 
 
