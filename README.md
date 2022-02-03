@@ -179,7 +179,7 @@ run the hands-on.py script and paste your image-path over there and TADA! you're
 
 This is the procedure that must be followed. So I used MS Paint to create this digit. and this is how it appears (please don't judge!! :-))
 
-dafsdfasdfa
+<img src="./Images_used/eight.png" >
 
                 (eight.png)
 
