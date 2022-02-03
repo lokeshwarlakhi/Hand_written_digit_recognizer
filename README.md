@@ -161,7 +161,7 @@ draw you digit in you local machine using any simple art tool! how much time its
 
 <img src="./Images_used/Untitled.png" >                          <img src="./Images_used/two.png" >
 
-                        (fig - 1)                                                                       (fig-2)
+                        (fig - 1)                                        (fig-2)
 
 in the above figures fig-1 will give more accurate results than fig-2. 
 
