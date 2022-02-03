@@ -43,7 +43,7 @@ Mnist, a built-in dataset from Keras, is used for this model.
 mnist = tf.keras.datasets.mnist
 ```
 
-![mnist dataset](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\data-original.png)
+<img src="./Images_used/data-original.png">
 
                                     (image Source: Kaggle.com)
 
@@ -55,21 +55,21 @@ The data is being divided into train labels, train images, test labels, and test
 (train_x,train_y),(test_x,test_y) = mnist.load_data()
 ```
 
- ![image](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\download%20(3).png) 
+<img src="./Images_used/download (3).png" >
 
 Now, the colours in this image are divided into three channels, and we don't need to extract their attributes based on colour, from the image. Our model will focus on the archs and lines used in their creation. Furthermore, any image that we consider is presented in the RGB(0-255) by default to our model. To be more specific ,according to the activation of each pixel in the image, the numpy array has values ranging from 0-255. As a result, our model takes a long time to analyse. So to tackel this, we will noramlize the matrix and then extract the featurse to feed our model. which will require less time to master. As a result, once we've normalised our data, our model will see the image as 
 
-![image 2](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\download%20(2).png)
+<img src="./Images_used/download (2).png" >
 
 Our image is now an array with values ranging from 0 to 1, which is a smart thing to do before feeding it to our model. Now apply the same logic to our entire 60,000-image dataset.
 
 <mark>Before normalization:</mark>
 
-![normal-1](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\download%20(5).png)
+<img src="./Images_used/download (5).png" >
 
 <mark>After normalization:</mark>
 
-![normal-2](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\download%20(4).png)
+<img src="./Images_used/download (4).png" >
 
 Now that we have our data, all we need to do is create a model to feed it. to anticipate our next inputs.
 
@@ -79,11 +79,13 @@ Now, one of the most important aspects of our model to consider is the layers an
 
 The below image is the summary of The model .
 
-![Convolutional Neural Network. ](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\model%20summary.png) 
+<img src="./Images_used/model summary.png" >
 
-To comprehend the CNN employed in this model The following photograph, which I obtained after a lot of online surfing, will be useful.![cnn for mnist](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\nural-network-05.jpg)
+To comprehend the CNN employed in this model The following photograph, which I obtained after a lot of online surfing, will be useful.!
 
-![convolution](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\conv-full-layer.gif)
+<img src="./Images_used/nural-network-05.jpg" >
+
+<img src="./Images_used/conv-full-layer.gif" >
 
 ( Image credits: analyticsindiamag.com )
 
@@ -121,7 +123,7 @@ validation_split = 0.3
 
 I obtained 98.12 percent accuracy with a loss of 0.069 while evaluating this model, which is a very good result for a CNN model. but i'll surely be working on 'decreasing the loss' ( you know what i mean!!).
 
-![results](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\model%20evaluate.png)
+<img src="./Images_used/model evaluate.png" >
 
 # <u>Predicting the digits using our model</u>
 
@@ -129,15 +131,15 @@ I obtained 98.12 percent accuracy with a loss of 0.069 while evaluating this mod
 
 Lets demonstrate the model,  now lets take a label from our test labels lets say, 63. 
 
-<img title="" src="file:///Y:/00_HUSTLE/DEVELOPMENT/DEEP LEARNING PROJECTS/mnist_DIGIT_PREDICTOR/Images used/test_label.png" alt="test label" width="543">
+<img src="./Images_used/test_label.png" >
 
 Now lets see the coorresponding image in test_x which contains the image arrays of the hand written numbers.
 
-![test_img](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\test_img.png)
+<img src="./Images_used/test_img.png" >
 
 Now here is the prediction time! let's see what our model predicts
 
-![img_predict](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\x_predicted.png)
+<img src="./Images_used/x_predicted.png" >
 
 Here, 'p' is the array which contains all the predictions of the test images, and p[63] is the predicted label for test_y[63] image. Hope this completely makes sense.
 
@@ -157,7 +159,7 @@ Well here comes the exiting part, for this version of model all you need is the 
 
 draw you digit in you local machine using any simple art tool! how much time its gonna take tho. just make sure you draw the digit with a lighter shade on a darker background to get more accurate result. what i mean is
 
-![img - 1](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\Untitled.png)                           ![l  ok](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\two.png)
+<img src="./Images_used/Untitled.png" >                          <img src="./Images_used/two.png" >
 
                         (fig - 1)                                                                       (fig-2)
 
@@ -177,13 +179,13 @@ run the hands-on.py script and paste your image-path over there and TADA! you're
 
 This is the procedure that must be followed. So I used MS Paint to create this digit. and this is how it appears (please don't judge!! :-))
 
-![img](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\eight.png)
+dafsdfasdfa
 
                 (eight.png)
 
 and now lets run the program hands-on.py and here's how it works 
 
-![gif](Y:\00_HUSTLE\DEVELOPMENT\DEEP%20LEARNING%20PROJECTS\mnist_DIGIT_PREDICTOR\Images%20used\ezgif.com-gif-maker.gif)
+<img src="./Images_used/ezgif.com-gif-maker.gif" >
 
 And that's how it ends!
 
