@@ -191,4 +191,4 @@ And that's how it ends!
 
 If any necessary commits are required to increase the elegance of this model! i'm always open for a PR.
 
-### Happy coding! lokeshwarlakhi🖖🏾
+### Happy coding! i🖖🏾
