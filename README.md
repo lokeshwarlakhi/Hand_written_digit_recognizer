@@ -1,10 +1,10 @@
 # <u>Hand Written Digits Recognizer</u>
 
-This is a model made out of Neural Network specifically a Convolutional Neural Network model. This was done with a pre-built dataset from the tensorflow and keras packages. There are other alternative libraries that can be used for this purpose, one of which is the PyTorch library.
+This is a model made out of Neural Network specifically a [Convolutional Neural Network](https://towardsdatascience.com/convolutional-neural-network-17fb77e76c05#:~:text=Fully%20Connected%20Layer%20is%20simply,into%20the%20fully%20connected%20layer.) model. This was done with a pre-built dataset from the `tensorflow` and `keras` packages. There are other alternative libraries that can be used for this purpose, one of which is the `PyTorch` library.
 
 ### Table of contents:
 
-1. Loading the data
+1. Importing Libraries
 
 2. Loading the data
 
@@ -20,9 +20,9 @@ This is a model made out of Neural Network specifically a Convolutional Neural N
 
                              
 
-## Libraries Involved
+## Importing Libraries
 
-Modules used in creating this model are `numpy` , `os` , `matplotlib` , `tensorflow` , `keras` , `cv2` 
+Modules used in creating this model are [`numpy`](https://numpy.org/) , [`os`](https://docs.python.org/3/library/os.html) , [`matplotlib`](https://matplotlib.org/) , [`tensorflow`](https://www.tensorflow.org/api_docs/python/tf) , [`keras`](https://keras.io/guides/) , [`cv2`](https://opencv.org/) 
 
 ```python
 import os
@@ -37,7 +37,7 @@ from keras.layers import Dense,Flatten,Conv2D, MaxPooling2D
 
 ## Loading the data
 
-Mnist, a built-in dataset from Keras, is used for this model. 
+[Mnist](https://en.wikipedia.org/wiki/MNIST_database), a built-in dataset from `keras`, is used for this model. 
 
 ```python
 mnist = tf.keras.datasets.mnist
@@ -47,7 +47,7 @@ mnist = tf.keras.datasets.mnist
 
                                     (image Source: Kaggle.com)
 
-The data is actually loaded in the form of a numpy array. The entire image is 28x28 pixels in size. When we plot it with matplotlib, we get this image.
+The data is actually loaded in the form of a numpy array. The entire image is 28x28 pixels in size. When we plot it with `matplotlib`, we get this image.
 
 The data is being divided into train labels, train images, test labels, and test images.
 
@@ -57,7 +57,7 @@ The data is being divided into train labels, train images, test labels, and test
 
 <img src="./Images_used/download (3).png" >
 
-Now, the colours in this image are divided into three channels, and we don't need to extract their attributes based on colour, from the image. Our model will focus on the archs and lines used in their creation. Furthermore, any image that we consider is presented in the RGB(0-255) by default to our model. To be more specific ,according to the activation of each pixel in the image, the numpy array has values ranging from 0-255. As a result, our model takes a long time to analyse. So to tackel this, we will noramlize the matrix and then extract the featurse to feed our model. which will require less time to master. As a result, once we've normalised our data, our model will see the image as 
+Now, the colours in this image are divided into three channels, and we don't need to extract their attributes based on colour, from the image. Our model will focus on the archs and lines used in their creation. Furthermore, any image that we consider is presented in the RGB(0-255) by default to our model. To be more specific ,according to the activation of each pixel in the image, the numpy array has values ranging from 0-255. As a result, our model takes a long time to analyse. So to tackel this, we will noramlize the matrix and then extract the featurse to feed our model. which will require less time to master. As a result, once we've [normalised](https://www.geeksforgeeks.org/how-to-normalize-an-array-in-numpy-in-python/) our data, our model will see the image as 
 
 <img src="./Images_used/download (2).png" >
 
@@ -75,7 +75,7 @@ Now that we have our data, all we need to do is create a model to feed it. to an
 
 ## Making the Model
 
-Now, one of the most important aspects of our model to consider is the layers and how they are organised. So, for my model, I utilised three convolutional layers and a maxpooling layer after each one. After that, I flattened the convolutional model and connected it to the Fully Connected layer.
+Now, one of the most important aspects of our model to consider is the layers and how they are organised. So, for my model, I utilised three [convolutional layers](https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/#:~:text=Convolutional%20layers%20are%20the%20major,that%20results%20in%20an%20activation.&text=The%20result%20is%20highly%20specific,detected%20anywhere%20on%20input%20images.) and a [maxpooling layer](https://analyticsindiamag.com/max-pooling-in-convolutional-neural-network-and-its-features/#:~:text=Max%20Pooling%20is%20a%20convolution,largest%20information%20available%20amplitude%20wise.) after each one. After that, I flattened the convolutional model and connected it to the Fully Connected layer.
 
 The below image is the summary of The model .
 
@@ -93,13 +93,13 @@ The image above shows a standard Convolution layer, and the white boxes around t
 
 ## Compiling and Training Our Model
 
-Now that we've finished building our model, it's time to teach it the numbers. People in this world are incredibly lethargic when it comes to maintaining a decent handwriting. So that's why ,we need to teach the model the most possible methods to write a digit T T.
+Now that we've finished building our model, it's time to teach it the numbers. People in this world are incredibly lethargic when it comes to maintaining a decent handwriting. So that's why ,we need to teach the model the most possible methods to write a digit T_T.
 
 This isn't a one-time activity where our model will understand how things operate soon after we show it all the images. Even ,we humans need need some revisions in order to remember things. Similarly, our model must be taught the photos several times, which is referred to as Epochs in deep learning. The greater the number of epochs, the lower the loss while forecasting the image.
 
 Always keep in mind that a NN strives to minimise the loss for each epoch; it does not increase accuracy; rather, it reduces losses, which increases accuracy.
 
-Now , to complie our model we are using adam optimizer 
+Now , to complie our model we are using [adam optimizer](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/#:~:text=Adam%20is%20a%20replacement%20optimization,sparse%20gradients%20on%20noisy%20problems.) 
 
 ```python
 model.compile(
@@ -109,7 +109,7 @@ metrics = ['accuracy']
 )
 ```
 
-while feeding our model i've used 5 epochs and validated the data with a split of 30% of the training data. we don't want overfitting cases to our data so that's why i choose 5, which is pretty decent regarding my model.
+while feeding our model i've used 5 epochs and validated the data with a split of 30% of the training data. we don't want [overfitting](https://www.analyticsvidhya.com/blog/2020/09/overfitting-in-cnn-show-to-treat-overfitting-in-convolutional-neural-networks/#:~:text=Overfitting%20indicates%20that%20your%20model,of%20overall%20Deep%20Learning%20Models.) cases to our data so that's why i choose 5, which is pretty decent regarding my model.
 
 ```python
 model.fit(
@@ -161,7 +161,7 @@ draw you digit in you local machine using any simple art tool! how much time its
 
 <img src="./Images_used/Untitled.png" >                          <img src="./Images_used/two.png" >
 
-                        (fig - 1)                                                                       (fig-2)
+                        (fig - 1)                                        (fig-2)
 
 in the above figures fig-1 will give more accurate results than fig-2. 
 
@@ -191,4 +191,4 @@ And that's how it ends!
 
 If any necessary commits are required to increase the elegance of this model! i'm always open for a PR.
 
-### with this signing off..! lokeshwarlakhi🖖🏾
+### Happy coding! i🖖🏾
